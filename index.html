@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0908" />
+  <title>IOVINO — DJ / Producer</title>
+
+  <meta name="description" content="Iovino. Argentine DJ and Producer based in Barcelona. Progressive & melodic electronic music. Releases on The Soundgarden, Musique de Lune, Slc6 Music." />
+  <meta name="author" content="Lautaro Gómez Iovino" />
+  <meta name="keywords" content="Iovino, DJ, Producer, Progressive House, Melodic Techno, Barcelona, Buenos Aires, The Soundgarden, Nick Warren, Hernan Cattaneo" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="IOVINO — DJ / Producer" />
+  <meta property="og:description" content="Argentine DJ and Producer based in Barcelona. Releases on The Soundgarden, Musique de Lune, Slc6 Music." />
+  <meta property="og:image" content="assets/images/iovino-hero-clean.jpg" />
+
+  <link rel="icon" type="image/png" href="assets/images/logo-dark.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Side rail (desktop) -->
+  <aside class="side-rail" aria-hidden="true">
+    <span class="side-rail__text">BUENOS AIRES &nbsp;—&nbsp; BARCELONA</span>
+  </aside>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" aria-label="Iovino home">
+      <span class="wordmark">IOVINO</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about" data-i18n="nav.about">Bio</a>
+      <a href="#music" data-i18n="nav.music">Música</a>
+      <a href="#live" data-i18n="nav.live">Live</a>
+      <a href="#contact" data-i18n="nav.contact">Contacto</a>
+    </nav>
+
+    <div class="nav__lang">
+      <button class="lang-btn is-active" data-lang="es" aria-label="Español">ES</button>
+      <span aria-hidden="true">/</span>
+      <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+    </div>
+
+    <button class="nav__menu" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" aria-hidden="true">
+    <a href="#about" data-i18n="nav.about">Bio</a>
+    <a href="#music" data-i18n="nav.music">Música</a>
+    <a href="#live" data-i18n="nav.live">Live</a>
+    <a href="#contact" data-i18n="nav.contact">Contacto</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__bg">
+        <img src="assets/images/iovino-hero-clean.jpg" alt="" aria-hidden="true" />
+      </div>
+
+      <div class="hero__inner">
+        <div class="hero__meta hero__meta--top">
+          <span class="dot" aria-hidden="true"></span>
+          <span data-i18n="hero.tag1">Disponible para shows · 2026</span>
+        </div>
+
+        <h1 class="hero__title">
+          <span class="hero__title-row reveal-letters">
+            <span>I</span><span>O</span><span>V</span><span>I</span><span>N</span><span>O</span>
+          </span>
+        </h1>
+
+        <div class="hero__sub">
+          <span class="hero__sub-line" data-i18n="hero.role">DJ &nbsp;/&nbsp; Producer</span>
+          <span class="hero__sub-line hero__sub-line--italic" data-i18n="hero.from">Argentina · Barcelona</span>
+        </div>
+
+        <div class="hero__meta hero__meta--bottom">
+          <span data-i18n="hero.scroll">Desliza</span>
+          <svg width="14" height="40" viewBox="0 0 14 40" fill="none" aria-hidden="true">
+            <path d="M7 0V36M7 36L1 30M7 36L13 30" stroke="currentColor" stroke-width="1" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>The Soundgarden</span><span class="dot-sep">●</span>
+        <span>Musique de Lune</span><span class="dot-sep">●</span>
+        <span>Slc6 Music</span><span class="dot-sep">●</span>
+        <span>One Dot Six Two</span><span class="dot-sep">●</span>
+        <span>Flown Records</span><span class="dot-sep">●</span>
+        <span>The Soundgarden</span><span class="dot-sep">●</span>
+        <span>Musique de Lune</span><span class="dot-sep">●</span>
+        <span>Slc6 Music</span><span class="dot-sep">●</span>
+        <span>One Dot Six Two</span><span class="dot-sep">●</span>
+        <span>Flown Records</span><span class="dot-sep">●</span>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+      <div class="section-num">01</div>
+
+      <div class="about__grid">
+        <div class="about__heading">
+          <span class="kicker" data-i18n="about.kicker">— Sobre Iovino</span>
+          <h2 class="display-2" data-i18n="about.title">
+            Una carrera entre dos orillas del Atlántico.
+          </h2>
+        </div>
+
+        <div class="about__copy">
+          <p data-i18n="about.p1">
+            <strong>Lautaro Gómez Iovino</strong>, conocido artísticamente como
+            Iovino, es un DJ y productor argentino nacido en la
+            Provincia de Buenos Aires en 1993, actualmente radicado en
+            Barcelona.
+          </p>
+
+          <p data-i18n="about.p2">
+            Influenciado desde temprana edad por la música y sus diversos
+            géneros, inició su carrera profesional como DJ en 2019, llevando
+            su sonido a reconocidos clubes de la Provincia de Buenos Aires
+            como Crobar, Bahrein, Elements Club, La Biblioteca y Niceto Club.
+          </p>
+
+          <p data-i18n="about.p3">
+            Su camino como productor comenzó en 2021. Desde entonces, ha
+            lanzado música en sellos de renombre como
+            <strong>The Soundgarden</strong> de Nick Warren,
+            <strong>Musique de Lune</strong> y <strong>Slc6 Music</strong>,
+            recibiendo apoyo constante de grandes referentes como
+            Hernán Cattáneo, Nick Warren, John Digweed y Mariano Mellino.
+          </p>
+        </div>
+
+        <figure class="about__photo">
+          <img src="assets/images/iovino-portrait.jpg" alt="Iovino portrait" />
+          <figcaption>
+            <span data-i18n="about.caption">Retrato — Sesión 2025</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats">
+        <div class="stat">
+          <span class="stat__num">2019</span>
+          <span class="stat__label" data-i18n="stats.dj">DJ desde</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">2021</span>
+          <span class="stat__label" data-i18n="stats.prod">Productor desde</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">20K+</span>
+          <span class="stat__label" data-i18n="stats.audience">Audiencia</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">3</span>
+          <span class="stat__label" data-i18n="stats.countries">Países en gira</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MUSIC / LABELS ============ -->
+    <section class="music" id="music">
+      <div class="section-num">02</div>
+
+      <div class="music__head">
+        <span class="kicker" data-i18n="music.kicker">— Discografía</span>
+        <h2 class="display-2" data-i18n="music.title">
+          Lanzamientos en sellos de referencia.
+        </h2>
+      </div>
+
+      <div class="labels">
+        <article class="label-card">
+          <div class="label-card__year">2021—</div>
+          <h3>The Soundgarden</h3>
+          <p data-i18n="labels.tsg">Sello fundado por Nick Warren. Una de las plataformas más respetadas del progressive contemporáneo.</p>
+          <span class="label-card__tag" data-i18n="labels.tag.released">Lanzado</span>
+        </article>
+
+        <article class="label-card">
+          <div class="label-card__year">2022—</div>
+          <h3>Musique de Lune</h3>
+          <p data-i18n="labels.mdl">Sello francés de melodic & deep house orientado a una estética nocturna y emocional.</p>
+          <span class="label-card__tag" data-i18n="labels.tag.released">Lanzado</span>
+        </article>
+
+        <article class="label-card">
+          <div class="label-card__year">2023—</div>
+          <h3>Slc6 Music</h3>
+          <p data-i18n="labels.slc6">Plataforma argentina ligada al circuito progressive sudamericano.</p>
+          <span class="label-card__tag" data-i18n="labels.tag.released">Lanzado</span>
+        </article>
+
+        <article class="label-card label-card--upcoming">
+          <div class="label-card__year">2026—</div>
+          <h3>One Dot Six Two</h3>
+          <p data-i18n="labels.odst">Próximo lanzamiento en uno de los sellos más sólidos de la escena progressive.</p>
+          <span class="label-card__tag" data-i18n="labels.tag.upcoming">Próximamente</span>
+        </article>
+
+        <article class="label-card label-card--upcoming">
+          <div class="label-card__year">2026—</div>
+          <h3>Flown Records</h3>
+          <p data-i18n="labels.flown">Lanzamiento programado para el ciclo 2026.</p>
+          <span class="label-card__tag" data-i18n="labels.tag.upcoming">Próximamente</span>
+        </article>
+      </div>
+
+      <!-- Support marquee -->
+      <div class="support">
+        <span class="kicker kicker--center" data-i18n="support.kicker">— Apoyado por</span>
+        <div class="support__names">
+          <span>Hernán Cattáneo</span>
+          <span class="dot-sep">●</span>
+          <span>Nick Warren</span>
+          <span class="dot-sep">●</span>
+          <span>John Digweed</span>
+          <span class="dot-sep">●</span>
+          <span>Mariano Mellino</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LIVE ============ -->
+    <section class="live" id="live">
+      <div class="section-num">03</div>
+
+      <div class="live__media">
+        <img src="assets/images/iovino-moody.jpg" alt="Iovino in club lighting" />
+      </div>
+
+      <div class="live__content">
+        <span class="kicker" data-i18n="live.kicker">— En vivo</span>
+        <h2 class="display-2" data-i18n="live.title">
+          De los clubes de Buenos Aires al festival circuit europeo.
+        </h2>
+
+        <div class="live__columns">
+          <div>
+            <h4 data-i18n="live.clubs">Clubes</h4>
+            <ul>
+              <li>Crobar</li>
+              <li>Bahrein</li>
+              <li>Elements Club</li>
+              <li>La Biblioteca</li>
+              <li>Niceto Club</li>
+            </ul>
+          </div>
+          <div>
+            <h4 data-i18n="live.shared">Compartió cabina con</h4>
+            <ul>
+              <li>Kamilo Sanclemente</li>
+              <li>John Cosani</li>
+              <li>Sebastián Busto</li>
+              <li>Paul Deep</li>
+              <li>Marcelo Vasami</li>
+              <li>Martín García</li>
+            </ul>
+          </div>
+          <div>
+            <h4 data-i18n="live.intl">Internacional</h4>
+            <ul>
+              <li>
+                <span class="strong-item">Brunch Electronik Festival</span><br />
+                <span class="muted">Barcelona · 2025</span>
+              </li>
+              <li>
+                <span class="strong-item" data-i18n="live.us">Estados Unidos</span><br />
+                <span class="muted" data-i18n="live.tour">Tour 2024</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="section-num">04</div>
+
+      <div class="contact__inner">
+        <span class="kicker" data-i18n="contact.kicker">— Contacto</span>
+        <h2 class="display-1" data-i18n="contact.title">
+          ¿Trabajamos juntos?
+        </h2>
+        <p class="contact__lead" data-i18n="contact.lead">
+          Bookings, releases, colaboraciones o consultas de prensa.
+        </p>
+
+        <div class="contact__grid">
+          <a class="contact-link" href="mailto:lgomeziovino@outlook.com">
+            <span class="contact-link__label" data-i18n="contact.email">Email</span>
+            <span class="contact-link__value">lgomeziovino@outlook.com</span>
+            <span class="contact-link__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="contact-link" href="https://instagram.com/iovino__" target="_blank" rel="noopener">
+            <span class="contact-link__label">Instagram</span>
+            <span class="contact-link__value">@iovino__</span>
+            <span class="contact-link__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="contact-link" href="https://soundcloud.com/iovinomusic" target="_blank" rel="noopener">
+            <span class="contact-link__label">SoundCloud</span>
+            <span class="contact-link__value">@iovinomusic</span>
+            <span class="contact-link__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__logo">
+        <span class="wordmark wordmark--sm">IOVINO</span>
+      </div>
+
+      <div class="footer__meta">
+        <span>© 2026 Lautaro Gómez Iovino</span>
+        <span data-i18n="footer.rights">Todos los derechos reservados</span>
+      </div>
+
+      <div class="footer__location">
+        <span>Barcelona&nbsp;·&nbsp;ES</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
