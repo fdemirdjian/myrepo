@@ -126,9 +126,9 @@ Sustituir las imágenes en `assets/images/` manteniendo los mismos nombres de ar
 | Archivo                  | Uso              | Tamaño sugerido | Formato |
 |--------------------------|------------------|-----------------|---------|
 | `iovino-hero-clean.jpg`  | Hero (vertical)  | 1200×1700       | JPG     |
-| `iovino-portrait.jpg`    | About (vertical) | 800×1000        | JPG     |
-| `iovino-moody.jpg`       | Live (horizontal)| 1600×900        | JPG     |
-| `logo-dark.png`          | Nav/footer       | 500×500         | PNG transparente |
+| `iovino-portrait.jpg`    | Bio (vertical)   | 1067×1600       | JPG     |
+| `iovino-moody.jpg`       | Live (vertical)  | 1266×1900       | JPG     |
+| `logo-dark.png`          | Favicon          | 500×500         | PNG transparente |
 
 ### Actualizar el press kit
 
