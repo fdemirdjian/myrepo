@@ -57,6 +57,8 @@
       'contact.title':    '¿Trabajamos juntos?',
       'contact.lead':     'Bookings, releases, colaboraciones o consultas de prensa.',
       'contact.email':    'Email',
+      'contact.presskitEs': 'Press Kit · ESP',
+      'contact.presskitEn': 'Press Kit · EN',
 
       'footer.rights':    'Todos los derechos reservados',
     },
@@ -107,6 +109,8 @@
       'contact.title':    'Let\u2019s work together.',
       'contact.lead':     'Bookings, releases, collaborations or press inquiries.',
       'contact.email':    'Email',
+      'contact.presskitEs': 'Press Kit · ESP',
+      'contact.presskitEn': 'Press Kit · EN',
 
       'footer.rights':    'All rights reserved',
     },

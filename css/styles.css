@@ -166,10 +166,10 @@ body {
 
 .side-rail__text {
   font-family: var(--display);
-  font-weight: 300;
-  font-size: 11px;
-  letter-spacing: .35em;
-  color: var(--muted);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: .25em;
+  color: var(--bone-soft);
   text-transform: uppercase;
   white-space: nowrap;
   display: inline-block;
@@ -236,16 +236,16 @@ body {
 .nav__links {
   display: flex;
   gap: var(--s-5);
-  font-size: 12px;
-  letter-spacing: .25em;
+  font-size: 13px;
+  letter-spacing: .15em;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .nav__links a {
   position: relative;
   padding: 6px 0;
-  color: var(--bone-soft);
+  color: var(--bone);
   transition: color var(--t-fast) var(--ease);
 }
 
@@ -436,18 +436,18 @@ body {
   align-items: center;
   gap: var(--s-3);
   font-family: var(--display);
-  font-weight: 300;
-  font-size: 11px;
-  letter-spacing: .35em;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: .18em;
   text-transform: uppercase;
-  color: var(--bone-soft);
+  color: var(--bone);
 }
 
 .hero__meta--bottom {
   align-self: flex-end;
   flex-direction: column;
   gap: var(--s-2);
-  color: var(--muted);
+  color: var(--bone-soft);
   margin-top: var(--s-5);
 }
 
@@ -507,11 +507,11 @@ body {
   gap: var(--s-3) var(--s-5);
   align-items: center;
   font-family: var(--display);
-  font-weight: 300;
-  font-size: clamp(13px, 1.4vw, 16px);
-  letter-spacing: .3em;
+  font-weight: 500;
+  font-size: clamp(14px, 1.4vw, 17px);
+  letter-spacing: .22em;
   text-transform: uppercase;
-  color: var(--bone-soft);
+  color: var(--bone);
   opacity: 0;
   animation: fadeUp .8s var(--ease) .9s forwards;
 }
@@ -578,18 +578,18 @@ section {
   top: var(--s-6);
   right: var(--gutter);
   font-family: var(--display);
-  font-weight: 300;
-  font-size: 11px;
-  letter-spacing: .35em;
-  color: var(--muted);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: .22em;
+  color: var(--bone-soft);
 }
 
 .kicker {
   display: inline-block;
   font-family: var(--display);
-  font-weight: 300;
-  font-size: 11px;
-  letter-spacing: .4em;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: .18em;
   text-transform: uppercase;
   color: var(--wine);
   margin-bottom: var(--s-3);
@@ -678,10 +678,10 @@ section {
   bottom: -28px;
   right: 0;
   font-family: var(--display);
-  font-weight: 300;
-  font-size: 10px;
-  letter-spacing: .35em;
-  color: var(--muted);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: .22em;
+  color: var(--bone-soft);
   text-transform: uppercase;
 }
 
@@ -728,11 +728,11 @@ section {
 
 .stat__label {
   font-family: var(--display);
-  font-weight: 300;
-  font-size: 11px;
-  letter-spacing: .25em;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: .18em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--bone-soft);
 }
 
 @media (max-width: 700px) {
@@ -799,10 +799,10 @@ section {
 
 .label-card__year {
   font-family: var(--display);
-  font-weight: 300;
+  font-weight: 500;
   font-size: 13px;
-  letter-spacing: .25em;
-  color: var(--muted);
+  letter-spacing: .18em;
+  color: var(--bone-soft);
 }
 
 .label-card h3 {
@@ -824,11 +824,11 @@ section {
 .label-card__tag {
   align-self: flex-start;
   font-family: var(--display);
-  font-weight: 300;
-  font-size: 10px;
-  letter-spacing: .25em;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: .2em;
   text-transform: uppercase;
-  color: var(--bone-soft);
+  color: var(--bone);
   padding: 4px 10px;
   border: 1px solid var(--bg-line);
   margin-top: var(--s-2);
@@ -933,9 +933,9 @@ section {
 
 .live__columns h4 {
   font-family: var(--display);
-  font-weight: 400;
-  font-size: 12px;
-  letter-spacing: .3em;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: .22em;
   text-transform: uppercase;
   color: var(--wine);
   margin-bottom: var(--s-3);
@@ -957,10 +957,11 @@ section {
 
 .muted {
   font-family: var(--display);
-  font-size: 11px;
-  letter-spacing: .2em;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: .15em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--bone-soft);
 }
 
 @media (max-width: 900px) {
@@ -1017,6 +1018,28 @@ section {
   color: var(--accent);
 }
 
+/* Press kit download links — slightly more subdued */
+.contact-link--download {
+  color: var(--bone-soft);
+}
+
+.contact-link--download:first-of-type {
+  margin-top: var(--s-4);
+  border-top: 1px solid var(--bg-line);
+  padding-top: var(--s-5);
+}
+
+.contact-link--download .contact-link__value {
+  font-size: clamp(15px, 1.3vw, 17px);
+  letter-spacing: .2em;
+  color: var(--bone-soft);
+  font-weight: 400;
+}
+
+.contact-link--download .contact-link__arrow {
+  font-size: 18px;
+}
+
 .contact-link__icon {
   display: inline-flex;
   align-items: center;
@@ -1044,18 +1067,18 @@ section {
 
 .contact-link__label {
   font-family: var(--display);
-  font-weight: 300;
-  font-size: 11px;
-  letter-spacing: .35em;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: .25em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--bone-soft);
 }
 
 .contact-link__value {
   font-family: var(--display);
-  font-weight: 300;
-  font-size: clamp(20px, 2.5vw, 32px);
-  letter-spacing: .01em;
+  font-weight: 400;
+  font-size: clamp(20px, 2.5vw, 30px);
+  letter-spacing: .015em;
   color: inherit;
 }
 
