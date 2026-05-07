@@ -57,6 +57,7 @@
       'contact.title':    '¿Trabajamos juntos?',
       'contact.lead':     'Bookings, releases, colaboraciones o consultas de prensa.',
       'contact.email':    'Email',
+      'contact.copied':   '¡Copiado!',
       'contact.presskitEs': 'Press Kit · ESP',
       'contact.presskitEn': 'Press Kit · EN',
 
@@ -109,6 +110,7 @@
       'contact.title':    'Let\u2019s work together.',
       'contact.lead':     'Bookings, releases, collaborations or press inquiries.',
       'contact.email':    'Email',
+      'contact.copied':   'Copied!',
       'contact.presskitEs': 'Press Kit · ESP',
       'contact.presskitEn': 'Press Kit · EN',
 
@@ -273,6 +275,55 @@
   }
 
   /* ---------------------------------------
+     Copy email to clipboard
+     --------------------------------------- */
+  function initCopyEmail() {
+    const buttons = document.querySelectorAll('[data-copy]');
+    if (!buttons.length) return;
+
+    function copyText(text) {
+      // Modern API — works on HTTPS
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(text);
+      }
+      // Fallback — works everywhere including local file://
+      return new Promise((resolve, reject) => {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.left = '-9999px';
+        ta.style.top = '0';
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        try {
+          const ok = document.execCommand('copy');
+          document.body.removeChild(ta);
+          ok ? resolve() : reject();
+        } catch (err) {
+          document.body.removeChild(ta);
+          reject(err);
+        }
+      });
+    }
+
+    buttons.forEach(btn => {
+      let timer = null;
+      btn.addEventListener('click', () => {
+        const text = btn.getAttribute('data-copy');
+        copyText(text).then(() => {
+          btn.classList.add('is-copied');
+          clearTimeout(timer);
+          timer = setTimeout(() => btn.classList.remove('is-copied'), 1800);
+        }).catch(() => {
+          // If both APIs fail, fall back to a mailto: link
+          window.location.href = 'mailto:' + text;
+        });
+      });
+    });
+  }
+
+  /* ---------------------------------------
      Boot
      --------------------------------------- */
   function boot() {
@@ -282,6 +333,7 @@
     initCursor();
     initReveal();
     initAnchorOffset();
+    initCopyEmail();
   }
 
   if (document.readyState === 'loading') {
