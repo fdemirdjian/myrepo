@@ -13,6 +13,7 @@
     es: {
       'nav.about':    'Bio',
       'nav.music':    'Música',
+      'nav.tracks':   'Tracks',
       'nav.live':     'Live',
       'nav.contact':  'Contacto',
 
@@ -44,6 +45,10 @@
 
       'support.kicker':   '— Apoyado por',
 
+      'tracks.kicker':    '— Tracks',
+      'tracks.title':     'Escucha en Spotify.',
+      'tracks.cta':       'Ver perfil completo en Spotify',
+
       'live.kicker':  '— En vivo',
       'live.title':   'De los clubes de Buenos Aires al festival circuit europeo.',
       'live.clubs':   'Clubes',
@@ -65,6 +70,7 @@
     en: {
       'nav.about':    'Bio',
       'nav.music':    'Music',
+      'nav.tracks':   'Tracks',
       'nav.live':     'Live',
       'nav.contact':  'Contact',
 
@@ -95,6 +101,10 @@
       'labels.tag.upcoming':  'Upcoming',
 
       'support.kicker':   '— Supported by',
+
+      'tracks.kicker':    '— Tracks',
+      'tracks.title':     'Listen on Spotify.',
+      'tracks.cta':       'View full profile on Spotify',
 
       'live.kicker':  '— Live',
       'live.title':   'From the clubs of Buenos Aires to the European festival circuit.',
@@ -230,6 +240,7 @@
     const targets = document.querySelectorAll(
       '.about__heading, .about__copy, .about__photo, .stat, ' +
       '.music__head, .label-card, .support, ' +
+      '.tracks__head, .track-card, .tracks__cta, ' +
       '.live__media, .live__content, ' +
       '.contact__inner > *, .footer__inner > *'
     );
