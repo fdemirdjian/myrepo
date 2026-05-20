@@ -22,7 +22,7 @@
       'hero.from':    'Argentina · Barcelona',
 
       'about.kicker': '— Sobre Iovino',
-      'about.title':  'Una carrera entre dos orillas del Atlántico.',
+      'about.title':  'Una carrera entre dos orillas del Atlántico',
       'about.p1':     '<strong>Lautaro Gómez Iovino</strong>, conocido artísticamente como Iovino, es un DJ y productor argentino nacido en la Provincia de Buenos Aires en 1993, actualmente radicado en Barcelona.',
       'about.p2':     'Influenciado desde temprana edad por la música y sus diversos géneros, inició su carrera profesional como DJ en 2019, llevando su sonido a reconocidos clubes de la Provincia de Buenos Aires como Crobar, Bahrein, Elements Club, La Biblioteca y Niceto Club.',
       'about.p3':     'Su camino como productor comenzó en 2021. Desde entonces, ha lanzado música en sellos de renombre como <strong>The Soundgarden</strong> de Nick Warren, <strong>Musique de Lune</strong> y <strong>Slc6 Music</strong>, recibiendo apoyo constante de grandes referentes como Hernán Cattáneo, Nick Warren, John Digweed y Mariano Mellino.',
@@ -34,7 +34,7 @@
       'stats.countries':  'Países en gira',
 
       'music.kicker':         '— Discografía',
-      'music.title':          'Lanzamientos en sellos de referencia.',
+      'music.title':          'Lanzamientos en sellos de referencia',
       'labels.tsg':           'Sello fundado por Nick Warren. Una de las plataformas más respetadas del progressive contemporáneo.',
       'labels.mdl':           'Sello francés de melodic & deep house orientado a una estética nocturna y emocional.',
       'labels.slc6':          'Plataforma argentina ligada al circuito progressive sudamericano.',
@@ -46,11 +46,11 @@
       'support.kicker':   '— Apoyado por',
 
       'tracks.kicker':    '— Tracks',
-      'tracks.title':     'Escucha en Spotify.',
+      'tracks.title':     'Escucha en Spotify',
       'tracks.cta':       'Ver perfil completo en Spotify',
 
       'live.kicker':  '— En vivo',
-      'live.title':   'De los clubes de Buenos Aires al festival circuit europeo.',
+      'live.title':   'De los clubes de Buenos Aires al festival circuit europeo',
       'live.clubs':   'Clubes',
       'live.shared':  'Compartió cabina con',
       'live.intl':    'Internacional',
@@ -79,7 +79,7 @@
       'hero.from':    'Argentina · Barcelona',
 
       'about.kicker': '— About Iovino',
-      'about.title':  'A career bridging two shores of the Atlantic.',
+      'about.title':  'A career bridging two shores of the Atlantic',
       'about.p1':     '<strong>Lautaro Gómez Iovino</strong>, known artistically as Iovino, is an Argentine DJ and producer born in Buenos Aires Province in 1993, currently based in Barcelona.',
       'about.p2':     'Influenced from an early age by music and its diverse genres, he began his professional DJ career in 2019, bringing his sound to renowned clubs across Buenos Aires Province including Crobar, Bahrein, Elements Club, La Biblioteca and Niceto Club.',
       'about.p3':     'His journey as a producer started in 2021. Since then, he has released music on respected labels such as <strong>The Soundgarden</strong> by Nick Warren, <strong>Musique de Lune</strong> and <strong>Slc6 Music</strong>, receiving consistent support from major artists like Hernán Cattáneo, Nick Warren, John Digweed and Mariano Mellino.',
@@ -91,7 +91,7 @@
       'stats.countries':  'Countries toured',
 
       'music.kicker':         '— Discography',
-      'music.title':          'Releases on industry-leading labels.',
+      'music.title':          'Releases on industry-leading labels',
       'labels.tsg':           'Label founded by Nick Warren. One of the most respected platforms in contemporary progressive music.',
       'labels.mdl':           'French melodic & deep house label with a nocturnal, emotional aesthetic.',
       'labels.slc6':          'Argentine platform tied to the South American progressive circuit.',
@@ -103,11 +103,11 @@
       'support.kicker':   '— Supported by',
 
       'tracks.kicker':    '— Tracks',
-      'tracks.title':     'Listen on Spotify.',
+      'tracks.title':     'Listen on Spotify',
       'tracks.cta':       'View full profile on Spotify',
 
       'live.kicker':  '— Live',
-      'live.title':   'From the clubs of Buenos Aires to the European festival circuit.',
+      'live.title':   'From the clubs of Buenos Aires to the European festival circuit',
       'live.clubs':   'Clubs',
       'live.shared':  'Shared the booth with',
       'live.intl':    'International',
@@ -115,7 +115,7 @@
       'live.tour':    '2024 Tour',
 
       'contact.kicker':   '— Contact',
-      'contact.title':    'Let\u2019s work together.',
+      'contact.title':    'Let\u2019s work together',
       'contact.lead':     'Bookings, releases, collaborations or press inquiries.',
       'contact.email':    'Email',
       'contact.copied':   'Copied!',
