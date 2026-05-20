@@ -19,7 +19,6 @@
       'hero.tag1':    'Disponible para shows · 2026',
       'hero.role':    'DJ / Producer',
       'hero.from':    'Argentina · Barcelona',
-      'hero.scroll':  'Desliza',
 
       'about.kicker': '— Sobre Iovino',
       'about.title':  'Una carrera entre dos orillas del Atlántico.',
@@ -72,7 +71,6 @@
       'hero.tag1':    'Available for shows · 2026',
       'hero.role':    'DJ / Producer',
       'hero.from':    'Argentina · Barcelona',
-      'hero.scroll':  'Scroll',
 
       'about.kicker': '— About Iovino',
       'about.title':  'A career bridging two shores of the Atlantic.',
@@ -178,7 +176,7 @@
     }
     tick();
 
-    const hoverable = 'a, button, .label-card, .contact-link, .lang-btn, .nav__menu';
+    const hoverable = 'a, button, .label-card, .contact-link, .lang-btn, .nav__menu, .hero__social-link';
     document.querySelectorAll(hoverable).forEach(el => {
       el.addEventListener('mouseenter', () => cursor.classList.add('is-hover'));
       el.addEventListener('mouseleave', () => cursor.classList.remove('is-hover'));
