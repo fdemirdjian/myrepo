@@ -339,7 +339,7 @@
     initLang();
     initNav();
     initMobileMenu();
-    initCursor();
+    // initCursor();  // disabled — using system cursor
     initReveal();
     initAnchorOffset();
     initCopyEmail();
