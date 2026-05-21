@@ -333,6 +333,102 @@
   }
 
   /* ---------------------------------------
+     Tracks carousel
+     --------------------------------------- */
+  function initTracksCarousel() {
+    const root = document.querySelector('[data-tracks-carousel]');
+    if (!root) return;
+
+    const track     = root.querySelector('[data-tracks-track]');
+    const prevBtn   = root.querySelector('[data-tracks-prev]');
+    const nextBtn   = root.querySelector('[data-tracks-next]');
+    const dotsHost  = root.querySelector('[data-tracks-dots]');
+    const cards     = Array.from(track.querySelectorAll('.track-card'));
+    if (!cards.length) return;
+
+    // Build dot indicators
+    const dots = cards.map((_, i) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'tracks__dot';
+      b.setAttribute('aria-label', `Ir al track ${i + 1}`);
+      b.addEventListener('click', () => scrollToCard(i));
+      dotsHost.appendChild(b);
+      return b;
+    });
+
+    function cardCenter(el) {
+      const r = el.getBoundingClientRect();
+      return r.left + r.width / 2;
+    }
+
+    function activeIndex() {
+      const viewportCenter = track.getBoundingClientRect().left + track.clientWidth / 2;
+      let best = 0;
+      let bestDist = Infinity;
+      cards.forEach((c, i) => {
+        const d = Math.abs(cardCenter(c) - viewportCenter);
+        if (d < bestDist) { bestDist = d; best = i; }
+      });
+      return best;
+    }
+
+    function update() {
+      const idx = activeIndex();
+      cards.forEach((c, i) => {
+        c.classList.toggle('is-active', i === idx);
+        c.classList.toggle('is-near', Math.abs(i - idx) === 1);
+      });
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+
+      // Disabled state for the nav buttons at the ends
+      if (prevBtn) prevBtn.disabled = (track.scrollLeft <= 2);
+      if (nextBtn) nextBtn.disabled = (track.scrollLeft + track.clientWidth >= track.scrollWidth - 2);
+    }
+
+    function scrollToCard(i) {
+      const c = cards[i];
+      if (!c) return;
+      const targetLeft =
+        c.offsetLeft - (track.clientWidth - c.clientWidth) / 2;
+      track.scrollTo({ left: targetLeft, behavior: 'smooth' });
+    }
+
+    function step(dir) {
+      const idx = activeIndex();
+      scrollToCard(Math.max(0, Math.min(cards.length - 1, idx + dir)));
+    }
+
+    prevBtn?.addEventListener('click', () => step(-1));
+    nextBtn?.addEventListener('click', () => step(+1));
+
+    // Throttle scroll-driven updates with rAF
+    let rafId = null;
+    track.addEventListener('scroll', () => {
+      if (rafId) return;
+      rafId = requestAnimationFrame(() => { rafId = null; update(); });
+    }, { passive: true });
+
+    window.addEventListener('resize', () => {
+      // Re-center current card on resize to keep snap consistent
+      scrollToCard(activeIndex());
+    });
+
+    // Keyboard navigation when the carousel has focus
+    root.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); step(-1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); step(+1); }
+    });
+    root.setAttribute('tabindex', '0');
+
+    // Initial state: center the first card and paint indicators
+    requestAnimationFrame(() => {
+      scrollToCard(0);
+      update();
+    });
+  }
+
+  /* ---------------------------------------
      Boot
      --------------------------------------- */
   function boot() {
@@ -343,6 +439,7 @@
     initReveal();
     initAnchorOffset();
     initCopyEmail();
+    initTracksCarousel();
   }
 
   if (document.readyState === 'loading') {
