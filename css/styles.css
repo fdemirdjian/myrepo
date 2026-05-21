@@ -1089,24 +1089,60 @@ section {
   margin-bottom: var(--s-6);
 }
 
-.tracks__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--s-3);
+/* ----- Carousel ----- */
+.tracks__carousel {
+  position: relative;
+  margin: 0 calc(var(--s-5) * -1);
 }
 
+.tracks__track {
+  display: flex;
+  gap: var(--s-3);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: var(--s-3) var(--s-5) var(--s-4);
+  /* Mask the lateral edges so cards fade out as they leave the viewport */
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+}
+
+.tracks__track::-webkit-scrollbar { display: none; }
+
 .track-card {
+  flex: 0 0 clamp(260px, 32%, 360px);
+  scroll-snap-align: center;
   position: relative;
   background: var(--bg-elevated);
   border: 1px solid var(--bg-line);
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
-  transition: border-color var(--t-med) var(--ease), transform var(--t-med) var(--ease);
+  transform: scale(.86);
+  opacity: .45;
+  filter: saturate(.8);
+  transition:
+    transform .55s var(--ease),
+    opacity   .55s var(--ease),
+    filter    .55s var(--ease),
+    border-color var(--t-med) var(--ease),
+    box-shadow var(--t-med) var(--ease);
+  will-change: transform, opacity;
 }
 
-.track-card:hover {
+.track-card.is-active {
+  transform: scale(1);
+  opacity: 1;
+  filter: saturate(1);
   border-color: var(--muted);
-  transform: translateY(-4px);
+  box-shadow: 0 24px 60px -28px rgba(0,0,0,.7);
+}
+
+.track-card.is-near {
+  transform: scale(.92);
+  opacity: .75;
+  filter: saturate(.9);
 }
 
 .track-card iframe {
@@ -1114,7 +1150,71 @@ section {
   width: 100%;
   height: 352px;
   border: 0;
-  border-radius: 12px;
+  border-radius: 14px;
+}
+
+/* ----- Nav arrows ----- */
+.tracks__nav {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(20, 19, 18, .72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--bg-line);
+  color: var(--bone);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition:
+    background var(--t-med) var(--ease),
+    border-color var(--t-med) var(--ease),
+    color var(--t-med) var(--ease),
+    opacity var(--t-med) var(--ease);
+}
+
+.tracks__nav:hover {
+  background: var(--bone);
+  color: var(--ink);
+  border-color: var(--bone);
+}
+
+.tracks__nav:disabled {
+  opacity: .3;
+  cursor: not-allowed;
+}
+
+.tracks__nav--prev { left: var(--s-2); }
+.tracks__nav--next { right: var(--s-2); }
+
+/* ----- Dots ----- */
+.tracks__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: var(--s-3);
+}
+
+.tracks__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--bg-line);
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: background var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+}
+
+.tracks__dot:hover { background: var(--muted); }
+
+.tracks__dot.is-active {
+  background: var(--bone);
+  transform: scale(1.35);
 }
 
 /* CTA — link to full Spotify profile */
@@ -1156,24 +1256,16 @@ section {
   transform: translateX(4px);
 }
 
-@media (max-width: 1100px) {
-  .tracks__grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .track-card:last-child {
-    grid-column: 1 / -1;
-    max-width: 50%;
-    justify-self: start;
-  }
+@media (max-width: 900px) {
+  .tracks__carousel { margin: 0 calc(var(--s-3) * -1); }
+  .track-card { flex-basis: clamp(240px, 70%, 320px); }
+  .tracks__nav { width: 38px; height: 38px; }
 }
 
-@media (max-width: 700px) {
-  .tracks__grid {
-    grid-template-columns: 1fr;
-  }
-  .track-card:last-child {
-    max-width: none;
-  }
+@media (max-width: 600px) {
+  .track-card { flex-basis: 78%; }
+  .tracks__nav { display: none; }
+  .track-card iframe { height: 320px; }
 }
 
 /* ============================================
