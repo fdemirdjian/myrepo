@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 472" fill="#f4ede4" role="img" aria-label="IOVINO">
+  <title>IOVINO</title>
+  <!--
+    Pure vector wordmark. 1024 × 472 grid.
+    Stylised lowercase letterforms at cap-height. Stroke 48px.
+  -->
+
+  <!-- i -->
+  <rect x="24" y="27" width="48" height="421"/>
+
+  <!-- o (stadium with hole) -->
+  <path fill-rule="evenodd" d="
+    M 200 23 C 156 23 120 59 120 103 L 120 371
+    C 120 415 156 451 200 451 C 244 451 280 415 280 371
+    L 280 103 C 280 59 244 23 200 23 Z
+    M 200 71 C 182 71 168 85 168 103 L 168 371
+    C 168 389 182 403 200 403 C 218 403 232 389 232 371
+    L 232 103 C 232 85 218 71 200 71 Z"/>
+
+  <!-- v -->
+  <path d="
+    M 318 27 L 356 27 Q 361 27 361 33
+    L 407 384
+    L 445 33 Q 445 27 450 27 L 488 27
+    Q 494 27 493 33
+    L 433 449 L 372 449
+    L 313 33 Q 313 27 318 27 Z"/>
+
+  <!-- i -->
+  <rect x="529" y="27" width="48" height="421"/>
+
+  <!-- n: left vertical, right vertical, plus an arch connecting them.
+       The arch has a small sweep on the left side (where it joins the
+       left vertical) and a large rounded corner on the right side. -->
+  <rect x="628" y="27" width="48" height="421"/>
+  <rect x="744" y="75" width="48" height="373"/>
+  <path d="
+    M 676 27
+    L 676 75
+    L 744 75
+    L 744 75
+    Q 744 27 744 27
+    L 744 27
+    Q 696 27 676 50
+    L 676 27 Z"/>
+  <!-- arch top and right corner -->
+  <path d="
+    M 676 50
+    Q 696 27 744 27
+    Q 792 27 792 75
+    L 792 75
+    L 744 75
+    L 744 75
+    Q 744 75 720 75
+    L 676 75
+    Z"/>
+
+  <!-- o -->
+  <path fill-rule="evenodd" d="
+    M 920 24 C 876 24 840 60 840 104 L 840 370
+    C 840 414 876 450 920 450 C 964 450 1000 414 1000 370
+    L 1000 104 C 1000 60 964 24 920 24 Z
+    M 920 72 C 902 72 888 86 888 104 L 888 370
+    C 888 388 902 402 920 402 C 938 402 952 388 952 370
+    L 952 104 C 952 86 938 72 920 72 Z"/>
+</svg>

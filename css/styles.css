@@ -307,6 +307,16 @@ body {
 
 .nav__logo:hover { opacity: .7; }
 
+.nav__logo-img {
+  display: block;
+  height: 22px;
+  width: auto;
+}
+
+@media (max-width: 720px) {
+  .nav__logo-img { height: 18px; }
+}
+
 /* Wordmark — pure CSS recreation of the IOVINO logo */
 .wordmark {
   font-family: var(--display);
@@ -560,15 +570,27 @@ body {
 
 .hero__title {
   margin: var(--s-5) 0 var(--s-4);
-  font-family: var(--display);
-  font-weight: 200;
-  font-size: clamp(80px, 22vw, 320px);
-  line-height: .9;
-  letter-spacing: -.02em;
-  color: var(--bone);
-  text-transform: uppercase;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
+.hero__logo {
+  display: block;
+  width: 100%;
+  max-width: min(410px, 38vw);
+  height: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: logoReveal 1s var(--ease) .3s forwards;
+}
+
+@keyframes logoReveal {
+  0%   { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Legacy classes kept for fallback (no longer used) */
 .hero__title-row {
   display: flex;
   flex-wrap: nowrap;
